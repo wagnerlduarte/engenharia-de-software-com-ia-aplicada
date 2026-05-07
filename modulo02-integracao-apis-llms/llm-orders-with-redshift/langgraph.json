@@ -1,0 +1,7 @@
+{
+  "node_version": "22",
+  "graphs": {
+    "orders_qa": "./src/graph/factory.ts:graph"
+  },
+  "env": ".env"
+}

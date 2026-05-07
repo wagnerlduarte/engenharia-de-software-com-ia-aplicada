@@ -1,0 +1,41 @@
+{
+  "name": "orders-assistant-redshift",
+  "version": "1.0.0",
+  "description": "Orders Assistant - Text2SQL with RedShift + LangGraph",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node --env-file .env src/index.ts",
+    "dev": "node --watch --inspect --env-file .env src/index.ts",
+    "dev:frontend": "cd frontend && npm run dev",
+    "test": "node --env-file .env --test tests/**/*.test.ts",
+    "test:dev": "node --inspect --env-file .env --test --watch tests/**/*.test.ts",
+    "test:e2e:dev": "node --inspect --env-file .env --test --watch tests/**/*e2e.test.ts",
+    "test:e2e": "node --inspect --env-file .env --test tests/**/*e2e.test.ts",
+    "langgraph:serve": "npx @langchain/langgraph-cli dev"
+  },
+  "keywords": [
+    "langchain",
+    "langgraph",
+    "text2sql",
+    "redshift",
+    "orders-assistant",
+    "openrouter"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-redshift-data": "^3.1030.0",
+    "@aws-sdk/credential-providers": "^3.1030.0",
+    "@fastify/cors": "^11.2.0",
+    "@langchain/core": "^1.1.27",
+    "@langchain/openai": "^1.2.9",
+    "fastify": "^5.7.4",
+    "langchain": "^1.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.12"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
